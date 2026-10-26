@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Yash M | Software Developer & AI Systems</title>
-<meta name="description" content="Yash M, a Computer Science student building machine learning systems and web applications." />
+<title>Yash | AI Engineer</title>
+<meta name="description" content="Yash, a computer science student building machine learning systems from raw data to trained model." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
@@ -20,9 +20,8 @@
 :root[data-theme="dark"]{--bg:#0a1424;--surface:#101d33;--ink:#eef2f9;--muted:#9fb0cc;--line:#22314d;--blue:#7fb0ee;--gold:#e0b93d;--gold-soft:#2a2410}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:5rem}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans);transition:background .2s, color .2s}
-a{color:var(--blue);text-decoration:none}
-a:hover{text-decoration:underline}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--sans)}
+a{color:var(--blue)}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
 .wrap{max-width:68rem;margin:0 auto;padding:0 1.5rem}
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -32,8 +31,7 @@ a:hover{text-decoration:underline}
 /* header */
 .site-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .header-inner{display:flex;align-items:center;gap:1.5rem;height:4rem}
-.brand{font:700 1.15rem var(--sans);color:var(--ink);text-decoration:none;margin-right:auto}
-.brand span{color:var(--gold)}
+.brand{font:700 1.05rem var(--sans);color:var(--ink);text-decoration:none;margin-right:auto}
 .site-nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0}
 .site-nav a{color:var(--muted);text-decoration:none;font-weight:500}
 .site-nav a:hover{color:var(--ink)}
@@ -41,11 +39,11 @@ a:hover{text-decoration:underline}
 .theme-toggle:hover{border-color:var(--gold)}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:4rem;align-items:center;padding:5rem 0 4.5rem}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:4rem;align-items:center;padding:6rem 0 5rem}
 h1{font:400 clamp(2.4rem,5.2vw,3.9rem)/1.08 var(--serif);margin:0 0 1.25rem;letter-spacing:-.01em}
 .hero-summary{max-width:34rem;color:var(--muted);font-size:1.15rem;margin:0 0 2rem}
 .btn{display:inline-block;background:var(--ink);color:var(--bg);padding:.8rem 1.4rem;border-radius:8px;font-weight:700;text-decoration:none}
-.btn:hover{background:var(--blue);color:#fff;text-decoration:none}
+.btn:hover{background:var(--blue);color:#fff}
 .text-link{margin-left:1.25rem;font-weight:500}
 .pipeline{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.5rem 1.5rem 1.25rem}
 .pipeline h2{font:700 .95rem var(--sans);margin:0 0 .25rem}
@@ -59,7 +57,7 @@ h1{font:400 clamp(2.4rem,5.2vw,3.9rem)/1.08 var(--serif);margin:0 0 1.25rem;lett
 
 /* sections */
 section{padding:4.5rem 0;border-top:1px solid var(--line)}
-h2.sec{font:400 2.1rem/1.15 var(--serif);margin:0 0 1.5rem}
+h2.sec{font:400 2rem/1.15 var(--serif);margin:0 0 1.5rem}
 .about{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
 .about p{margin:0 0 1rem;max-width:34rem}
 .skills{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:0;padding:0}
@@ -76,55 +74,35 @@ h3.sub{font:700 1rem var(--sans);margin:0 0 .75rem}
 .project{display:grid;grid-template-columns:3rem 1fr auto;gap:1rem 1.5rem;align-items:baseline;padding:1.4rem .5rem;border-bottom:1px solid var(--line)}
 .project:hover{background:var(--surface)}
 .project .n{color:var(--gold);font:700 .95rem var(--sans)}
-.project h3{margin:0;font:400 1.45rem/1.2 var(--serif)}
+.project h3{margin:0;font:400 1.5rem/1.2 var(--serif)}
 .project h3 a{color:var(--ink);text-decoration:none}
 .project h3 a:hover{color:var(--blue);text-decoration:underline}
-.project p{grid-column:2;margin:.25rem 0 0;color:var(--muted);font-size:.98rem}
+.project p{grid-column:2;margin:.25rem 0 0;color:var(--muted)}
 .tech{grid-row:1;grid-column:3;background:var(--gold-soft);color:var(--ink);border-radius:6px;padding:.15rem .6rem;font-size:.85rem;font-weight:500;white-space:nowrap}
 .empty{padding:2rem 0;color:var(--muted)}
 
-/* interactive grid: chat + weather side-by-side */
-.interactive-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:stretch}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-.panel-head{padding:1rem 1.25rem;border-bottom:1px solid var(--line);font-weight:700;background:color-mix(in srgb,var(--bg) 40%,var(--surface))}
-.panel-head span{display:block;font-weight:400;color:var(--muted);font-size:.88rem;margin-top:.15rem}
-
-/* chat panel */
-#chatMessages{height:16.5rem;overflow-y:auto;padding:1rem 1.25rem;display:flex;flex-direction:column;gap:.65rem;flex:1}
-.msg{max-width:85%;padding:.65rem .95rem;border-radius:12px;overflow-wrap:anywhere;font-size:.95rem;margin:0}
-.msg.bot{background:var(--bg);border:1px solid var(--line);align-self:flex-start}
+/* chat */
+.chat{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:start}
+.chat p{color:var(--muted);max-width:28rem}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.panel-head{padding:.9rem 1.2rem;border-bottom:1px solid var(--line);font-weight:700}
+.panel-head span{display:block;font-weight:400;color:var(--muted);font-size:.88rem}
+#chatMessages{height:16rem;overflow-y:auto;padding:1rem 1.2rem;display:flex;flex-direction:column;gap:.6rem}
+.msg{max-width:85%;padding:.6rem .9rem;border-radius:12px;overflow-wrap:anywhere}
+.msg.bot{background:var(--bg);border:1px solid var(--line)}
 .msg.me{align-self:flex-end;background:var(--ink);color:var(--bg)}
-.prompts{display:flex;gap:.5rem;padding:0 1.25rem .75rem;flex-wrap:wrap}
-.prompts button{font:inherit;font-size:.85rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.25rem .75rem;cursor:pointer}
+.prompts{display:flex;gap:.5rem;padding:0 1.2rem .8rem}
+.prompts button{font:inherit;font-size:.9rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:.25rem .8rem;cursor:pointer}
 .prompts button:hover{border-color:var(--gold)}
-#chatForm{display:flex;gap:.5rem;padding:.9rem 1.25rem;border-top:1px solid var(--line)}
-#chatInput{flex:1;min-width:0;font:inherit;font-size:.95rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.6rem .8rem}
-#chatForm button{font:700 .95rem var(--sans);color:var(--bg);background:var(--ink);border:0;border-radius:8px;padding:0 1.2rem;cursor:pointer}
-#chatForm button:hover{background:var(--blue)}
+#chatForm{display:flex;gap:.5rem;padding:.9rem 1.2rem;border-top:1px solid var(--line)}
+#chatInput{flex:1;min-width:0;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.6rem .8rem}
+#chatForm button{font:700 1rem var(--sans);color:var(--bg);background:var(--ink);border:0;border-radius:8px;padding:0 1.1rem;cursor:pointer}
 
-/* weather panel */
-.weather-body{padding:1.25rem;display:flex;flex-direction:column;gap:1rem;flex:1}
-.weather-form{display:flex;gap:.5rem}
-.weather-form input{flex:1;min-width:0;font:inherit;font-size:.95rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:.6rem .8rem}
-.weather-form button{font:700 .95rem var(--sans);color:var(--bg);background:var(--ink);border:0;border-radius:8px;padding:0 1.2rem;cursor:pointer}
-.weather-form button:hover{background:var(--blue)}
-.weather-result{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:1.25rem;min-height:12rem;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
-.weather-card{width:100%}
-.weather-temp{font:400 3.2rem/1 var(--serif);color:var(--blue);margin:.5rem 0 .25rem}
-.weather-city{font:700 1.25rem var(--sans);margin:0;color:var(--ink)}
-.weather-desc{color:var(--gold);font-weight:600;text-transform:capitalize;margin:0 0 .75rem}
-.weather-details{display:flex;justify-content:space-around;border-top:1px solid var(--line);padding-top:.75rem;margin-top:.75rem;font-size:.9rem;color:var(--muted)}
-.weather-placeholder{color:var(--muted);font-size:.95rem;margin:0}
-.weather-error{color:#d32f2f;font-weight:500;margin:0}
+footer{border-top:1px solid var(--line);padding:2rem 0}
+footer .wrap{display:flex;justify-content:space-between;color:var(--muted);font-size:.95rem}
 
-/* footer */
-footer{border-top:1px solid var(--line);padding:2.5rem 0}
-footer .wrap{display:flex;justify-content:space-between;color:var(--muted);font-size:.95rem;align-items:center}
-footer a{color:var(--muted)}
-footer a:hover{color:var(--ink)}
-
-@media (max-width:56rem){
-  .hero,.about,.interactive-grid{grid-template-columns:1fr;gap:2.5rem}
+@media (max-width:52rem){
+  .hero,.about,.chat{grid-template-columns:1fr;gap:2.5rem}
   .hero{padding:3.5rem 0}
   .site-nav{display:none}
   .project{grid-template-columns:2.2rem 1fr}
@@ -138,12 +116,12 @@ footer a:hover{color:var(--ink)}
 
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="#top">Yash M<span>.</span></a>
+    <a class="brand" href="#top">Yash</a>
     <nav class="site-nav" aria-label="Primary">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#interactive">Interactive</a></li>
+        <li><a href="#chat">Ask</a></li>
         <li><a href="https://github.com/uryash-web" target="_blank" rel="noopener noreferrer">GitHub</a></li>
       </ul>
     </nav>
@@ -154,19 +132,19 @@ footer a:hover{color:var(--ink)}
 <main id="main" class="wrap">
   <div id="top" class="hero">
     <div>
-      <h1>I build software & machine learning systems from data to deployment.</h1>
-      <p class="hero-summary">I’m Yash, a Computer Science student specializing in AI, Machine Learning, and web engineering. I focus on clean architectures, reliable pipelines, and practical solutions.</p>
+      <h1>I build machine learning systems, from raw data to trained model.</h1>
+      <p class="hero-summary">I’m Yash, a computer science student specializing in AI and ML. I like pipelines that run end to end, and tools that are clear to use.</p>
       <a class="btn" href="#projects">View projects</a>
-      <a class="text-link" href="https://github.com/uryash-web" target="_blank" rel="noopener noreferrer">GitHub Profile &rarr;</a>
+      <a class="text-link" href="https://github.com/uryash-web" target="_blank" rel="noopener noreferrer">GitHub profile</a>
     </div>
     <aside class="pipeline" aria-labelledby="pl-title">
-      <h2 id="pl-title">Currently Building</h2>
-      <p>A production-ready Network Security ML pipeline with modular components.</p>
+      <h2 id="pl-title">Currently building</h2>
+      <p>A network security ML pipeline. Each stage hands its output to the next.</p>
       <ol class="stages">
-        <li>Data Ingestion<small>MongoDB to train & test CSV datasets</small></li>
-        <li>Data Validation<small>Automated schema checks & drift detection</small></li>
-        <li>Data Transformation<small>KNN missing-value imputation</small></li>
-        <li>Model Training<small>Model evaluation, tracked with MLflow</small></li>
+        <li>Data ingestion<small>MongoDB to train and test CSVs</small></li>
+        <li>Data validation<small>Schema and column checks</small></li>
+        <li>Data transformation<small>KNN imputation</small></li>
+        <li>Model training<small>Model comparison, tracked with MLflow</small></li>
       </ol>
     </aside>
   </div>
@@ -174,23 +152,22 @@ footer a:hover{color:var(--ink)}
   <section id="about">
     <div class="about">
       <div>
-        <h2 class="sec">About Me</h2>
-        <p>I’m studying Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning (Roll No: 25BCON0533).</p>
-        <p>My work combines practical AI/ML model development with robust software engineering practices — from automated test suites to full-stack web applications.</p>
+        <h2 class="sec">About</h2>
+        <p>I’m studying Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning.</p>
+        <p>My focus is building real AI and ML systems and solving problems with clear, well-tested algorithms.</p>
       </div>
       <div>
-        <h3 class="sub">Technologies & Tools</h3>
+        <h3 class="sub">Areas I work with</h3>
         <ul class="skills">
-          <li>Python</li><li>Machine Learning</li><li>MLOps</li><li>NumPy</li><li>Pandas</li>
-          <li>JavaScript</li><li>HTML5 / CSS3</li><li>C++</li><li>SQL</li><li>MongoDB</li>
-          <li>Git & GitHub</li><li>Unit Testing</li>
+          <li>Python</li><li>NumPy</li><li>Pandas</li><li>C++</li><li>SQL</li><li>MongoDB</li>
+          <li>Machine learning</li><li>MLOps</li><li>Data analysis</li><li>Data evaluation</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section id="projects">
-    <h2 class="sec">Featured Projects</h2>
+    <h2 class="sec">Projects</h2>
     <div class="controls">
       <label class="visually-hidden" for="projectSearch">Search projects</label>
       <input id="projectSearch" type="search" placeholder="Search by project or technology" autocomplete="off" />
@@ -199,100 +176,68 @@ footer a:hover{color:var(--ink)}
       <button id="clearFilters" class="clear" type="button" hidden>Clear</button>
       <p id="projectCount" class="count" aria-live="polite"></p>
     </div>
-
     <ul class="projects" id="projectList">
-      <li class="project" data-technologies="Python,Machine Learning,MLOps">
+      <li class="project" data-technologies="Python">
         <span class="n">01</span>
-        <h3><a href="https://github.com/uryash-web/networksecurity" target="_blank" rel="noopener noreferrer">Network Security ML Pipeline</a></h3>
-        <span class="tech">Python, ML, MLOps</span>
-        <p>End-to-end Machine Learning pipeline with data ingestion, schema validation, KNN transformation, and model training for phishing detection.</p>
+        <h3><a href="https://github.com/uryash-web/Factorial-code" target="_blank" rel="noopener noreferrer">Factorial calculator</a></h3>
+        <span class="tech">Python</span>
+        <p>Calculates the factorial of a number.</p>
       </li>
-      <li class="project" data-technologies="JavaScript,HTML,CSS">
+      <li class="project" data-technologies="Python">
         <span class="n">02</span>
-        <h3><a href="https://github.com/uryash-web/Quiz" target="_blank" rel="noopener noreferrer">Interactive Quiz App</a></h3>
-        <span class="tech">JavaScript, Web</span>
-        <p>Dynamic responsive quiz application featuring interactive questions, state management, and real-time score assessment.</p>
+        <h3><a href="https://github.com/uryash-web/python-basics-25BCON0533" target="_blank" rel="noopener noreferrer">Fibonacci</a></h3>
+        <span class="tech">Python</span>
+        <p>Generates values in the Fibonacci sequence.</p>
       </li>
-      <li class="project" data-technologies="Python,Testing">
+      <li class="project" data-technologies="Python">
         <span class="n">03</span>
-        <h3><a href="https://github.com/uryash-web/Code_correction" target="_blank" rel="noopener noreferrer">Code Correction & Debugging Suite</a></h3>
-        <span class="tech">Python, Unit Testing</span>
-        <p>Test-driven Python utility implementing automated unit testing (RED &rarr; FIX &rarr; GREEN) for student grade calculations with 9 test boundaries.</p>
+        <h3><a href="https://github.com/uryash-web/Code_correction" target="_blank" rel="noopener noreferrer">Code correction</a></h3>
+        <span class="tech">Python</span>
+        <p>Converts structured data into a dictionary representation.</p>
       </li>
       <li class="project" data-technologies="Python">
         <span class="n">04</span>
-        <h3><a href="https://github.com/uryash-web/Factorial-code" target="_blank" rel="noopener noreferrer">Factorial Calculator & Audit</a></h3>
+        <h3><a href="https://github.com/uryash-web/reading_list" target="_blank" rel="noopener noreferrer">Reading list</a></h3>
         <span class="tech">Python</span>
-        <p>Factorial mathematical program paired with rigorous specification fact-checking and automated audit documentation.</p>
+        <p>An interactive web page for tracking books you want to read.</p>
       </li>
-      <li class="project" data-technologies="Python">
+      <li class="project" data-technologies="Python,JavaScript">
         <span class="n">05</span>
-        <h3><a href="https://github.com/uryash-web/python-basics-25BCON0533" target="_blank" rel="noopener noreferrer">Python Basics (25BCON0533)</a></h3>
-        <span class="tech">Python</span>
-        <p>Foundational programming exercises covering loops, input processing, and mathematical sequence operations.</p>
-      </li>
-      <li class="project" data-technologies="Python,JavaScript,Web">
-        <span class="n">06</span>
-        <h3><a href="https://github.com/uryash-web/yash-assignments" target="_blank" rel="noopener noreferrer">Yash Assignments (Unified Collection)</a></h3>
-        <span class="tech">All Projects</span>
-        <p>Complete consolidated repository containing all 5 coursework repositories and full project suites in one unified bundle.</p>
+        <h3><a href="https://github.com/uryash-web/Quiz" target="_blank" rel="noopener noreferrer">Quiz</a></h3>
+        <span class="tech">Python, JavaScript</span>
+        <p>A quiz web page with questions and scoring.</p>
       </li>
     </ul>
-    <p id="noProjects" class="empty" hidden>No projects match. Try another search or clear the filters.</p>
+    <p id="noProjects" class="empty" hidden>No projects match. Try another name or technology, or clear the filters.</p>
   </section>
 
-  <!-- Interactive Section: Chat + Weather Forecaster -->
-  <section id="interactive">
-    <h2 class="sec">Interactive Tools</h2>
-    <div class="interactive-grid">
-
-      <!-- AI Assistant Panel -->
-      <div class="panel">
-        <div class="panel-head">
-          Yash’s Assistant
-          <span>Answers from this portfolio</span>
-        </div>
-        <div id="chatMessages" aria-live="polite" aria-label="Chat conversation">
-          <p class="msg bot">Hi! I’m Yash’s portfolio assistant. Ask me about his projects, skills, or background!</p>
-        </div>
-        <div class="prompts" role="group" aria-label="Suggested questions">
-          <button type="button" data-prompt="What projects has Yash built?">Projects</button>
-          <button type="button" data-prompt="What technologies does Yash use?">Tech Stack</button>
-          <button type="button" data-prompt="Tell me about Yash's GitHub">GitHub</button>
-        </div>
-        <form id="chatForm">
-          <label class="visually-hidden" for="chatInput">Your message</label>
-          <input id="chatInput" type="text" placeholder="Ask a question..." maxlength="500" autocomplete="off" required />
-          <button type="submit">Send</button>
-        </form>
+  <section id="chat" class="chat">
+    <div>
+      <h2 class="sec">Ask about the work</h2>
+      <p>Ask about my projects, skills or background and the assistant will point you to the right details.</p>
+    </div>
+    <div class="panel">
+      <div class="panel-head">Yash’s assistant<span>Answers from this portfolio</span></div>
+      <div id="chatMessages" aria-live="polite" aria-label="Chat conversation">
+        <p class="msg bot">Hi! What would you like to know about Yash’s work?</p>
       </div>
-
-      <!-- Live Weather Forecaster Panel -->
-      <div class="panel">
-        <div class="panel-head">
-          Live Weather Forecaster
-          <span>Current conditions for any city worldwide</span>
-        </div>
-        <div class="weather-body">
-          <form id="weatherForm" class="weather-form">
-            <label class="visually-hidden" for="cityInput">City name</label>
-            <input id="cityInput" type="text" placeholder="Which city? (e.g. Delhi, London, Tokyo)" autocomplete="off" required />
-            <button id="weatherBtn" type="submit">Get Weather</button>
-          </form>
-          <div id="weatherResult" class="weather-result" aria-live="polite">
-            <p class="weather-placeholder">Enter any city above to check live weather.</p>
-          </div>
-        </div>
+      <div class="prompts" role="group" aria-label="Suggested questions">
+        <button type="button" data-prompt="What projects have you built?">Projects</button>
+        <button type="button" data-prompt="What technologies do you use?">Technologies</button>
       </div>
-
+      <form id="chatForm">
+        <label class="visually-hidden" for="chatInput">Your message</label>
+        <input id="chatInput" type="text" placeholder="Write a message..." maxlength="500" autocomplete="off" required />
+        <button type="submit">Send</button>
+      </form>
     </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>&copy; <span id="year"></span> Yash M (Roll No: 25BCON0533). All rights reserved.</p>
-    <a href="https://github.com/uryash-web" target="_blank" rel="noopener noreferrer">github.com/uryash-web &rarr;</a>
+    <p>&copy; <span id="year"></span> Yash</p>
+    <a href="https://github.com/uryash-web" target="_blank" rel="noopener noreferrer">GitHub profile</a>
   </div>
 </footer>
 
@@ -301,7 +246,7 @@ footer a:hover{color:var(--ink)}
   var $ = function (s) { return document.querySelector(s); };
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  /* theme toggle */
+  /* theme */
   var root = document.documentElement, toggle = $("#themeToggle");
   var dark = matchMedia("(prefers-color-scheme: dark)").matches;
   function applyTheme(isDark) {
@@ -313,13 +258,11 @@ footer a:hover{color:var(--ink)}
   applyTheme(dark);
   toggle.addEventListener("click", function () { dark = !dark; applyTheme(dark); });
 
-  /* project filtering & search */
+  /* projects: search + filter */
   var cards = Array.prototype.slice.call(document.querySelectorAll(".project"));
   var search = $("#projectSearch"), select = $("#technologyFilter"), clear = $("#clearFilters");
   var techs = {};
-  cards.forEach(function (c) {
-    c.dataset.technologies.split(",").forEach(function (t) { techs[t.trim()] = 1; });
-  });
+  cards.forEach(function (c) { c.dataset.technologies.split(",").forEach(function (t) { techs[t.trim()] = 1; }); });
   Object.keys(techs).sort().forEach(function (t) {
     var o = document.createElement("option"); o.value = t; o.textContent = t; select.appendChild(o);
   });
@@ -327,7 +270,7 @@ footer a:hover{color:var(--ink)}
     var q = search.value.trim().toLowerCase(), t = select.value, shown = 0;
     cards.forEach(function (c) {
       var text = c.textContent.toLowerCase();
-      var okT = t === "all" || c.dataset.technologies.split(",").map(function(s){return s.trim();}).indexOf(t) > -1;
+      var okT = t === "all" || c.dataset.technologies.split(",").indexOf(t) > -1;
       var show = okT && text.indexOf(q) > -1;
       c.hidden = !show; if (show) shown++;
     });
@@ -343,126 +286,27 @@ footer a:hover{color:var(--ink)}
   });
   filter();
 
-  /* chat logic */
-  var box = $("#chatMessages"), chatIn = $("#chatInput");
-  function addMsg(text, who) {
+  /* chat: simple built-in answers */
+  var box = $("#chatMessages"), input = $("#chatInput");
+  function add(text, who) {
     var p = document.createElement("p"); p.className = "msg " + who; p.textContent = text;
     box.appendChild(p); box.scrollTop = box.scrollHeight;
   }
-  function answerBot(q) {
+  function answer(q) {
     q = q.toLowerCase();
-    if (/project|built|work|repo/.test(q)) {
-      return "Yash has built: 1) Network Security ML Pipeline, 2) Interactive Quiz App, 3) Code Correction & Test Suite, 4) Factorial Calculator & Audit, and 5) Python Fundamentals (25BCON0533). All code is available at github.com/uryash-web!";
-    }
-    if (/tech|skill|stack|language|tool/.test(q)) {
-      return "Yash works with Python, JavaScript, Machine Learning, MLOps, NumPy, Pandas, C++, SQL, MongoDB, Git, and automated Unit Testing.";
-    }
-    if (/study|background|college|degree|about|yash/.test(q)) {
-      return "Yash is studying Computer Science and Engineering with a specialization in AI and ML (Roll No: 25BCON0533).";
-    }
-    if (/github|profile|link/.test(q)) {
-      return "You can view Yash's code and repositories at https://github.com/uryash-web.";
-    }
-    if (/weather/.test(q)) {
-      return "You can check live weather using the Weather Forecaster right next to this chat!";
-    }
-    return "I can answer questions about Yash’s projects, tech stack, academic background, or GitHub. What would you like to know?";
+    if (/project|built|work/.test(q)) return "I’ve built a factorial calculator, a Fibonacci generator, a code-correction tool, a reading list app and a quiz web page. I’m also building a network security ML pipeline.";
+    if (/tech|skill|stack|language|tool/.test(q)) return "Python, NumPy, Pandas, C++, SQL and MongoDB, with a focus on machine learning and MLOps.";
+    if (/study|background|college|degree|about/.test(q)) return "I’m studying Computer Science and Engineering with a specialization in AI and ML.";
+    if (/github|contact|repo/.test(q)) return "You can find all my code at github.com/uryash-web.";
+    return "I can answer questions about my projects, technologies, background or GitHub. Try one of those.";
   }
-  function askChat(text) {
-    addMsg(text, "me");
-    setTimeout(function () { addMsg(answerBot(text), "bot"); }, 300);
-  }
+  function ask(text) { add(text, "me"); setTimeout(function () { add(answer(text), "bot"); }, 300); }
   $("#chatForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var v = chatIn.value.trim();
-    if (!v) return;
-    chatIn.value = "";
-    askChat(v);
+    e.preventDefault(); var v = input.value.trim(); if (!v) return; input.value = ""; ask(v);
   });
   document.querySelectorAll("[data-prompt]").forEach(function (b) {
-    b.addEventListener("click", function () { askChat(b.dataset.prompt); });
+    b.addEventListener("click", function () { ask(b.dataset.prompt); });
   });
-
-  /* weather forecaster */
-  var weatherForm = $("#weatherForm"), cityInput = $("#cityInput"), weatherResult = $("#weatherResult"), weatherBtn = $("#weatherBtn");
-
-  var weatherCodeMap = {
-    0: "Clear sky ☀️", 1: "Mainly clear 🌤️", 2: "Partly cloudy ⛅", 3: "Overcast ☁️",
-    45: "Foggy 🌫️", 48: "Depositing rime fog 🌫️",
-    51: "Light drizzle 🌧️", 53: "Moderate drizzle 🌧️", 55: "Dense drizzle 🌧️",
-    61: "Slight rain 🌧️", 63: "Moderate rain 🌧️", 65: "Heavy rain 🌧️",
-    71: "Slight snow 🌨️", 73: "Moderate snow 🌨️", 75: "Heavy snow 🌨️",
-    80: "Rain showers 🌦️", 81: "Moderate rain showers 🌦️", 82: "Violent rain showers ⛈️",
-    95: "Thunderstorm ⛈️", 96: "Thunderstorm with slight hail ⛈️", 99: "Thunderstorm with heavy hail ⛈️"
-  };
-
-  weatherForm.addEventListener("submit", async function (e) {
-    e.preventDefault();
-    var city = cityInput.value.trim();
-    if (!city) return;
-
-    weatherBtn.disabled = true;
-    weatherResult.innerHTML = '<p class="weather-placeholder">Fetching weather for ' + city + '...</p>';
-
-    try {
-      /* First try Open-Meteo Geocoding (reliable, zero API key required) */
-      var geoRes = await fetch("https://geocoding-api.open-meteo.com/v1/search?name=" + encodeURIComponent(city) + "&count=1&language=en&format=json");
-      if (!geoRes.ok) throw new Error("GEO_FAILED");
-      var geoData = await geoRes.json();
-      if (!geoData.results || geoData.results.length === 0) {
-        throw new Error("CITY_NOT_FOUND");
-      }
-      var place = geoData.results[0];
-      var lat = place.latitude, lon = place.longitude;
-      var cityName = place.name + (place.country ? ", " + place.country : "");
-
-      /* Get current weather */
-      var wRes = await fetch("https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude=" + lon + "&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m");
-      if (!wRes.ok) throw new Error("WEATHER_FAILED");
-      var wData = await wRes.json();
-      var current = wData.current;
-      var temp = Math.round(current.temperature_2m);
-      var code = current.weather_code;
-      var condition = weatherCodeMap[code] || "Fair";
-      var humidity = current.relative_humidity_2m;
-      var wind = Math.round(current.wind_speed_10m);
-
-      weatherResult.innerHTML = 
-        '<div class="weather-card">' +
-          '<h3 class="weather-city">' + cityName + '</h3>' +
-          '<div class="weather-temp">' + temp + '°C</div>' +
-          '<div class="weather-desc">' + condition + '</div>' +
-          '<div class="weather-details">' +
-            '<span>Humidity: ' + humidity + '%</span>' +
-            '<span>Wind: ' + wind + ' km/h</span>' +
-          '</div>' +
-        '</div>';
-    } catch (err) {
-      console.warn("Open-Meteo failed, trying OpenWeather fallback:", err);
-      /* Fallback to OpenWeatherMap */
-      try {
-        var owKey = "5c7b60c5d6abd9cb73639a1cba0fce7a";
-        var owRes = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + encodeURIComponent(city) + "&appid=" + owKey + "&units=metric");
-        if (!owRes.ok) throw new Error("NOT_FOUND");
-        var d = await owRes.json();
-        weatherResult.innerHTML = 
-          '<div class="weather-card">' +
-            '<h3 class="weather-city">' + d.name + ", " + d.sys.country + '</h3>' +
-            '<div class="weather-temp">' + Math.round(d.main.temp) + '°C</div>' +
-            '<div class="weather-desc">' + d.weather[0].description + '</div>' +
-            '<div class="weather-details">' +
-              '<span>Humidity: ' + d.main.humidity + '%</span>' +
-              '<span>Wind: ' + Math.round(d.wind.speed * 3.6) + ' km/h</span>' +
-            '</div>' +
-          '</div>';
-      } catch (err2) {
-        weatherResult.innerHTML = '<p class="weather-error">Could not find weather for "' + city + '". Please check spelling.</p>';
-      }
-    } finally {
-      weatherBtn.disabled = false;
-    }
-  });
-
 })();
 </script>
 </body>
